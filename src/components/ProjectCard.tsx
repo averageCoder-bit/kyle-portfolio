@@ -10,7 +10,7 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
     <button
       type="button"
       onClick={onClick}
-      className="hover:cursor-pointer group flex w-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-all duration-300 hover:-translate-y-1 hover:border-neutral-400 hover:shadow-lg"
+      className="group flex w-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white text-left transition-all duration-300 hover:-translate-y-1 hover:border-neutral-400 hover:shadow-lg"
     >
       {/* Project Preview */}
       <div className="aspect-video overflow-hidden bg-neutral-100">
@@ -18,11 +18,11 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
           <img
             src={project.images[0]}
             alt={`${project.title} preview`}
-            className="h-full w-full object-cover transition-transform duration-500"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
           <div className="flex h-full items-center justify-center">
-            <span className="text-sm font-medium uppercase tracking-widest text-neutral-400">
+            <span className="text-xs font-medium uppercase tracking-widest text-neutral-400 sm:text-sm">
               Project Preview
             </span>
           </div>
@@ -30,8 +30,8 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
       </div>
 
       {/* Project Info */}
-      <div className="flex flex-1 flex-col p-6">
-        <p className="mb-2 text-xs font-medium uppercase tracking-widest text-neutral-400">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.15em] text-neutral-400 sm:text-xs sm:tracking-widest">
           Project
         </p>
 
